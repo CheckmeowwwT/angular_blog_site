@@ -23,7 +23,7 @@ import { AuthService } from '../../core/services/auth.service';
               Sign out
             </button>
           } @else {
-            <a routerLink="/login" class="navbar__btn navbar__btn--accent">Sign in</a>
+            <a routerLink="/login" class="navbar__btn navbar__btn--accent" style="color: #000">Sign in</a>
           }
         </div>
 
