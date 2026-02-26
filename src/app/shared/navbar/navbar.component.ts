@@ -66,7 +66,7 @@ import { AuthService } from '../../core/services/auth.service';
       text-decoration: none;
       font-family: var(--font-mono, 'JetBrains Mono', monospace);
       font-weight: 700; font-size: 1.3rem;
-      color: var(--accent, #8b5cf6);
+      color: var(--accent, #4a9ebb);
       letter-spacing: -0.02em;
     }
     .navbar__links {
@@ -78,14 +78,14 @@ import { AuthService } from '../../core/services/auth.service';
       transition: color 0.2s;
     }
     .navbar__links a:hover,
-    .navbar__links a.active { color: var(--accent, #8b5cf6); }
+    .navbar__links a.active { color: var(--accent, #4a9ebb); }
     .navbar__btn {
       border: none; cursor: pointer; font-size: 0.9rem;
       padding: 0.35rem 0.85rem; border-radius: 6px;
       transition: all 0.2s;
     }
     .navbar__btn--accent {
-      background: var(--accent, #8b5cf6);
+      background: var(--accent, #4a9ebb);
       color: var(--bg-primary, #0f0f13);
     }
     .navbar__btn--accent:hover { filter: brightness(1.15); }
@@ -93,7 +93,7 @@ import { AuthService } from '../../core/services/auth.service';
       background: transparent;
       color: var(--text-secondary, #71717a);
     }
-    .navbar__btn--ghost:hover { color: var(--accent, #8b5cf6); }
+    .navbar__btn--ghost:hover { color: var(--accent, #4a9ebb); }
 
     .navbar__hamburger {
       display: none; flex-direction: column; gap: 5px;
@@ -121,7 +121,7 @@ import { AuthService } from '../../core/services/auth.service';
       border: none; text-align: left; cursor: pointer;
     }
     .navbar__mobile a:hover, .navbar__mobile button:hover {
-      color: var(--accent, #8b5cf6);
+      color: var(--accent, #4a9ebb);
     }
 
     @media (max-width: 768px) {

@@ -40,8 +40,18 @@ export const routes: Routes = [
     path: 'u/:username',
     loadComponent: () =>
       import('./pages/user-home/user-home.component').then(m => m.UserHomeComponent),
-  },
 
+  },
+  {
+    path: 'login',
+    loadComponent: () =>
+      import('./pages/login/login.component').then(m => m.LoginComponent),
+  },
+  {
+    path: 'signup',
+    loadComponent: () =>
+      import('./pages/signup/signup.component').then(m => m.SignupComponent),
+  },
   // ── Authenticated: Dashboard ─────────────────────────
   {
     path: 'dashboard',
@@ -84,7 +94,7 @@ export const routes: Routes = [
         loadComponent: () =>
           import('./pages/admin/project-editor/project-editor.component').then(m => m.ProjectEditorComponent),
       },
-      { path: 'signup', component: SignupComponent },
+      
     ],
   },
 
