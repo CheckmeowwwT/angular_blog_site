@@ -46,6 +46,8 @@ export class AuthService {
     });
   }
 
+  
+
   private async loadProfileAndPrefs(userId: string) {
     const { data } = await this.sb.supabase
       .from('profiles')

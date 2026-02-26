@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
 import { authGuard } from './core/guards/auth.guard';
+import { SignupComponent } from './pages/signup/signup.component';
 
 export const routes: Routes = [
   // ── Public ────────────────────────────────────────────
@@ -83,6 +84,7 @@ export const routes: Routes = [
         loadComponent: () =>
           import('./pages/admin/project-editor/project-editor.component').then(m => m.ProjectEditorComponent),
       },
+      { path: 'signup', component: SignupComponent },
     ],
   },
 

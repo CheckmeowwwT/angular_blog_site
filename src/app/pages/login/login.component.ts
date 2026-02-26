@@ -1,16 +1,17 @@
 import { Component, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { RouterLink } from '@angular/router';
 import { AuthService } from '../../core/services/auth.service';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, RouterLink],
   template: `
     <div class="login-page">
       <div class="login-card">
         <h1>Sign In</h1>
-        <p class="subtitle">Admin access only.</p>
+        <p class="subtitle">Welcome back.</p>
 
         @if (errorMsg()) {
           <div class="error">{{ errorMsg() }}</div>
@@ -35,6 +36,10 @@ import { AuthService } from '../../core/services/auth.service';
         <button class="btn btn-github" (click)="githubLogin()">
           Sign in with GitHub
         </button>
+
+        <p class="footer-text">
+          Don't have an account? <a routerLink="/signup" class="footer-link">Sign up</a>
+        </p>
       </div>
     </div>
   `,
@@ -63,13 +68,13 @@ import { AuthService } from '../../core/services/auth.service';
       border-radius: 6px; color: #e0e0e0; font-size: 0.95rem;
       box-sizing: border-box;
     }
-    input:focus { outline: none; border-color: #8b5cf6; }
+    input:focus { outline: none; border-color: #4a9ebb; }
     .btn {
       width: 100%; padding: 0.65rem; border-radius: 6px; border: none;
       font-size: 0.95rem; cursor: pointer; transition: all 0.2s;
     }
-    .btn-primary { background: #8b5cf6; color: #fff; }
-    .btn-primary:hover { background: #7c3aed; }
+    .btn-primary { background: #4a9ebb; color: #fff; }
+    .btn-primary:hover { background: #5db8d6; }
     .btn-primary:disabled { opacity: 0.5; cursor: not-allowed; }
     .divider {
       text-align: center; margin: 1.25rem 0; color: #444; font-size: 0.8rem;
@@ -81,7 +86,15 @@ import { AuthService } from '../../core/services/auth.service';
     .btn-github {
       background: #222; color: #ccc; border: 1px solid #333;
     }
-    .btn-github:hover { border-color: #8b5cf6; color: #fff; }
+    .btn-github:hover { border-color: #4a9ebb; color: #fff; }
+    .footer-text {
+      text-align: center; margin-top: 1.25rem;
+      font-size: 0.85rem; color: #666;
+    }
+    .footer-link {
+      color: #4a9ebb; text-decoration: none;
+    }
+    .footer-link:hover { text-decoration: underline; }
   `],
 })
 export class LoginComponent {
