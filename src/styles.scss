@@ -7,8 +7,8 @@
   --bg-input: #0a0a0a;
   --border: #222222;
   --border-light: #1a1a1a;
-  --accent: #8b5cf6;
-  --accent-hover: #7c3aed;
+  --accent: #4a9ebb;;
+  --accent-hover: #5db8d6;
   --accent-muted: #1e1e2e;
   --text-primary: #e0e0e0;
   --text-secondary: #888888;
@@ -78,7 +78,7 @@ select {
   color: var(--text-primary, #e4e4e7);
   background: var(--bg-primary, #0f0f13);
   border-color: var(--border, #1e1e24);
-  caret-color: var(--accent, #8b5cf6);
+  caret-color: var(--accent, #4a9ebb);;
 }
 
 input::placeholder,
