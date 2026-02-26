@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&family=Georgia&family=Merriweather:wght@400;700&family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  --bg-primary: #0a0a0a;
+  --bg-secondary: #111111;
+  --bg-card: #151515;
+  --bg-input: #0a0a0a;
+  --border: #222222;
+  --border-light: #1a1a1a;
+  --accent: #8b5cf6;
+  --accent-hover: #7c3aed;
+  --accent-muted: #1e1e2e;
+  --text-primary: #e0e0e0;
+  --text-secondary: #888888;
+  --text-muted: #555555;
+  --text-faint: #444444;
+  --danger: #f87171;
+  --success: #4ade80;
+  --success-bg: #14532d;
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-family);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+
+::selection {
+  background: var(--accent);
+  color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-faint);
+}
+
+/* ──────────────────────────────────────────────────
+   Add these to the BOTTOM of your existing styles.scss
+   ────────────────────────────────────────────────── */
+
+/* Fix: inputs/textareas must inherit theme colours */
+input,
+textarea,
+select {
+  color: var(--text-primary, #e4e4e7);
+  background: var(--bg-primary, #0f0f13);
+  border-color: var(--border, #1e1e24);
+  caret-color: var(--accent, #8b5cf6);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--text-secondary, #71717a);
+  opacity: 0.6;
+}
+
+/* Fix: ensure theme cascades into all containers */
+.editor,
+.editor-body,
+.editor-header,
+.dash,
+.dash__main,
+.dash__sidebar {
+  color: var(--text-primary, #e4e4e7);
+  background: inherit;
+}

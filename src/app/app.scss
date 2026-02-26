@@ -1,0 +1,15 @@
+.app-shell {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: var(--bg-primary, #0a0a0a);
+    color: var(--text-primary, #e0e0e0);
+    font-family: var(--font-family, 'Inter', -apple-system, BlinkMacSystemFont, sans-serif);
+  }
+  .main-content {
+    flex: 1;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+  }
